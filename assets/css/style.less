@@ -1,0 +1,463 @@
+//colır variables
+@primary-color: #FADCD9;
+@secondary-color: #F8AFA6;
+@text-color: #000000;
+@background-color: #F9F1F0;
+
+// Font Sizes
+@baseFontSize: 16px;
+@small-font: 0.7em;//11px
+@large-font: 1.25em; //20px
+@big-large-font: 1.5em; //24px
+@tablet-font: 2.2em; // 35px
+@mobile-big-font: 2.5em; //40px 
+@big-font: 3.4375em; //55px
+
+
+
+@main-font: 'Gilroy';
+@main-light-font: 'Gilroy-Light';
+
+@spacing: 24px;
+
+/*
+@desktop: ~"only screen and (min-width: 1366px)";
+@tablet: ~"only screen and (min-width: 768px) and (max-width: 1365px)";
+@mobile: ~"only screen and (max-width: 767px)";
+*/
+
+@desktop: ~"only screen and (min-width: 1200px)";
+@tablet: ~"only screen and (min-width: 1000px) and (max-width: 1200px)";
+@mobile: ~"only screen and (max-width: 999px)";
+.responsive-font(@minSize, @maxSize) {
+    font-size: clamp(@minSize, 7vw, @maxSize);
+}
+
+.padding {
+    padding: 42px 0px;
+
+    @media @mobile {
+        padding: 24px 0px;
+
+    }
+}
+
+
+body {
+    background-color: @background-color;
+    color: @text-color;
+    font-family: @main-font;
+    padding: @spacing;
+
+    .header {
+        background-color: @primary-color;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 42px 24px;
+
+        .title_name {
+            color: @text-color;
+            font-size: @large-font;
+
+            &_span_1 {
+                font-family: @main-light-font ;
+                font-weight: 100; // fobnt dosyasından çekecem sonra şimdi değil 
+                font-style: italic;
+
+                @media @mobile {
+                    font-size: @small-font;
+
+                }
+            }
+
+            &_span_2 {
+                font-weight: lighter;
+
+                @media @mobile {
+                    font-size: @small-font;
+
+                }
+            }
+        }
+
+        .nemu_name {
+            align-items: center;
+            display: flex;
+
+            ul {
+                display: flex;
+                gap: 48px;
+                font-size: @baseFontSize;
+                font-weight: thin;
+                list-style-type: none;
+                margin: 0;
+
+                @media @mobile {
+                    font-size: @small-font;
+
+                }
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        color: @text-color ;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: @text-color ;
+                        }
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        @media @tablet {
+            display: flex;
+            flex-direction: row;
+            //gap: 30px;  //benim ayarladığım tablet modu için 
+                
+
+        }
+
+        .card1_body {
+            background-color: @primary-color;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            color: @text-color;
+            gap: 24px;
+            height: 100%;
+            margin-right: 20px;
+
+            @media @tablet {
+                margin-bottom: 20px;
+                margin-right: 10px;
+            }
+            @media @mobile {
+                margin-bottom: 20px;
+                margin-right: 0px; 
+                
+            }
+
+
+
+
+
+            &_top {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                margin-top: 34px;
+                margin-right: 30px;
+
+                img {
+                    width: 119px;
+                    height: auto;
+
+                }
+            }
+
+            span {
+                font-size: @big-font; //weight light-font;olacak
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-left: 24px;
+
+                @media @mobile {
+                    font-size: @mobile-big-font;
+                    margin-right: 0px;
+                }
+
+                @media @tablet {
+                    font-size: @tablet-font;
+                    margin-right: 0px;
+                }
+            }
+
+        }
+
+        .card2_body {
+            display: flex;
+            justify-content: end;
+            height: 100%;
+            margin-left: 20px;
+
+            @media @mobile {
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 24px;
+                margin-left: 0px;
+
+            }
+            @media @tablet {
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 10px;
+                // margin-top: 24px;
+
+                
+            }
+
+            img {
+                border-radius: 20px;
+            }
+        }
+
+
+    }
+
+    .contact {
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+
+        @media @tablet {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media @mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .card3_body {
+            width: auto;
+            height: 100%;
+            background-color: @primary-color;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+
+
+            gap: 85px;
+
+            @media @mobile {
+                margin-right: 0px;
+            }
+
+
+            &_top {
+                    img {
+                    height: 38px;
+                    width: 38px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    margin-top: 32px;
+                    margin-left: 24px;
+                }
+            }
+
+            &_bottom span {
+                width: 296px;
+                height: 150px;
+                font-size: @large-font; //l,ght font olacak
+                color: @text-color;
+                text-align: left;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                margin-bottom: 46px;
+                margin-left: 24px;
+
+                @media @tablet, @mobile {
+                    font-size: @baseFontSize;
+                    width: 200px;
+                }
+
+            }
+
+
+        }
+
+        .card4_body {
+            width: auto;
+            height: 100%;
+            background-color: @secondary-color;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+            margin-left: 20px;
+
+            @media @mobile {
+                margin-top: 42px;
+                margin-left: 0px;
+            }
+
+
+
+            &_top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                img {
+                    height: 38px;
+                    width: 38px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-end;
+                    margin-top: 32px;
+                    margin-right: 24px;
+                }
+
+                span {
+                    font-size: @baseFontSize; //light font olacak
+                    color: @text-color;
+                    text-align: left;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    margin-top: 34px;
+                    margin-left: 24px;
+                }
+            }
+
+
+            &_bottom span {
+                font-size: @big-font;
+                color: @text-color;
+                text-align: left;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start;
+                margin-bottom: 53px;
+                margin-left: 24px;
+            }
+
+
+
+
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+        background-color: @primary-color;
+        margin-top: 42px;
+        height: 80%;
+        padding: 24px;
+        font-size: @big-large-font;
+
+        @media @mobile {
+            height: 100%;
+
+        }
+        @media @tablet {
+            height: 100%;
+            
+        }
+
+        p {
+            font-size: @large-font;
+        }
+
+
+
+        .musea {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 35px;
+
+            img {
+                width: 26px;
+                height: 26px;
+                //margin-right: 30px;
+            }
+
+        }
+
+        .form-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .border {
+
+            background-color: @text-color;
+            color: @text-color;
+        }
+    }
+
+    .social {
+        background-color: @primary-color;
+        border-radius: 20px;
+        margin-top: 24px;
+        height: 13%;
+        align-items: center;
+        justify-content: space-around;
+
+        display: flex;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 75px;
+            font-size: @baseFontSize;
+            font-weight: thin; //---------------
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+
+            @media @mobile {
+                font-size: @big-large-font;
+                gap: 60px;
+                margin: 0px;
+                padding: 0px;
+
+            }
+
+            li {
+                display: inline-block;
+
+                a {
+                    color: @text-color ;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: @text-color ;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+}

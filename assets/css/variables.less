@@ -1,0 +1,34 @@
+//colır variables
+@primary-color: #FADCD9;
+@secondary-color: #F8AFA6;
+@text-color: #000000;
+@background-color: #F9F1F0;
+
+// Font Sizes
+@baseFontSize: 16px;
+@small-font: 0.7em;//11px
+@large-font: 1.25em; //20px
+@big-large-font: 1.5em; //24px
+@tablet-font: 2.2em; // 35px
+@mobile-big-font: 2.5em; //40px 
+@big-font: 3.4375em; //55px
+
+
+
+@main-font: 'Gilroy';
+@main-light-font: 'Gilroy-Light';
+
+@spacing: 24px;
+
+/*
+@desktop: ~"only screen and (min-width: 1366px)";
+@tablet: ~"only screen and (min-width: 768px) and (max-width: 1365px)";
+@mobile: ~"only screen and (max-width: 767px)";
+*/
+
+@desktop: ~"only screen and (min-width: 1200px)";
+@tablet: ~"only screen and (min-width: 1000px) and (max-width: 1200px)";
+@mobile: ~"only screen and (max-width: 999px)";
+.responsive-font(@minSize, @maxSize) {
+    font-size: clamp(@minSize, 7vw, @maxSize);
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "less": "^4.4.0"
+  },
+  "scripts": {
+    "build-css": "lessc /css_deneme/assets/css/style.less /css_deneme/assets/css/style.css",
+    "watch-css": "lessc --watch /css_deneme/assets/css/style.less /css_deneme/assets/css/style.css"
+  }
+}
