@@ -139,16 +139,3 @@ Proje LESS önişlemci desteği sunar. Stil değişiklikleri için:
 ### CSS Değişkenleri
 `assets/css/variables.css` dosyasında özelleştirilebilir değişkenler bulunur.
 
-## 📞 İletişim
-
-Portfolio sahibi: **Julia Huang**
-- Konum: Los Angeles (LA)
-- Uzmanlık: AI ile sanat ve mimari tasarım
-
-## 📄 Lisans
-
-Bu proje kişisel portfolio amaçlı geliştirilmiştir. Gilroy fontları için `assets/fonts/gilroy/License.txt` dosyasını kontrol edin.
-
----
-
-*Bu portfolio, AI destekli tasarım ve modern web teknolojilerinin birleşimini gösteren örnek bir projedir.*
